@@ -51,10 +51,16 @@ https://makersuite.google.com/app/apikey
 export GOOGLE_GEMINI_API_KEY="YOUR_API_KEY"
 ```
 
-3. Run the script:
+3. Run the Program:
 
 ```
-python3 gemini-bot.py "hi can i called you Jarvis?"
+python3 gemini-bot.py
+```
+
+3. Exit the Program:
+
+```
+>exit()
 ```
 
 **Troubleshooting**
