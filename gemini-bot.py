@@ -5,7 +5,9 @@ import argparse
 import time
 
 # Define the Gemini model ID as a constant
-GEMINI_MODEL_ID = "gemini-pro"
+GEMINI_MODEL_ID = "gemini-1.5-flash"
+model = genai.GenerativeModel(GEMINI_MODEL_ID)
+chat = model.start_chat(history=[])
 
 def setup_gemini_api():
     api_key = os.getenv("GOOGLE_GEMINI_API_KEY")
@@ -17,8 +19,7 @@ def setup_gemini_api():
 def generate_content(prompt):
     try:
         setup_gemini_api()
-        model = genai.GenerativeModel(GEMINI_MODEL_ID)
-        response = model.generate_content(prompt)
+        response = chat.send_message(prompt)
         for char in response.text:
             print(char, end='', flush=True)
             time.sleep(0.02)
@@ -28,11 +29,20 @@ def generate_content(prompt):
 
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("prompt", help="The prompt to generate content for.")
-    args = parser.parse_args()
+    """Main function."""
+    welcoming_text = """
+        Welcome to Gemini Text Generator made by (Awan),
+        Happy chat and talk with your Gemini Ai Generative
+        (Addhe Warman Putra - Awan)
 
-    generate_content(args.prompt)
+        type 'exit()' to exit from program
+    """
+    print(welcoming_text)
+    while True:
+        prompt = input("\n> ")
+        if prompt == "exit()":
+            exit()
+        generate_content(prompt)
 
 if __name__ == "__main__":
     main()
