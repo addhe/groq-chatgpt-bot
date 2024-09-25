@@ -1,81 +1,23 @@
-**README.md**
+# Groq Chatbot 
+Chatbot berbasis teks yang menggunakan API Groq untuk menghasilkan respon yang cerdas dan alami.
 
-**Introduction**
+## Deskripsi
+Projek ini adalah chatbot teks yang dapat berinteraksi dengan pengguna dan memberikan respon yang relevan menggunakan model bahasa besar (LLM) dari Groq. Chatbot ini dapat dijalankan di terminal dan memungkinkan pengguna untuk berinteraksi dengan model AI.
 
-This Python script uses Google Gen AI Gemini to generate code and perform various tasks. It requires an API key and installation of necessary requirements.
+## Dependencies
+Projek ini memerlukan beberapa dependencies untuk berjalan dengan lancar. Silakan lihat file requirements.txt untuk daftar dependencies lengkap.
 
-**Prerequisites**
+## Cara Menjalankan
+Untuk menjalankan chatbot, silakan ikuti langkah-langkah berikut:
 
-* Python 3.7 or later
-* Google Gen AI Gemini API key
-* Virtual environment
-* Requirements.txt
+Instal dependencies yang diperlukan dengan menjalankan perintah 
 
-**Installation**
+`pip install -r requirements.txt`
 
-1. Clone the repository:
+Pastikan Anda memiliki API key dari Groq dan simpan di variabel lingkungan GROQ_API_KEY
+Jalankan file main.py dengan perintah python main.py
+Fitur
+Chatbot ini memiliki beberapa fitur, seperti:
 
-```
-git clone https://github.com/addhe/my-google-gemini-bot.git
-```
-
-2. Create a virtual environment:
-
-```
-python3 -m venv venv
-```
-
-3. Activate the virtual environment:
-
-```
-source venv/bin/activate
-```
-
-4. Install the requirements:
-
-```
-pip install -r requirements.txt
-```
-
-**Usage**
-
-1. Obtain a Google Gen AI Gemini API key:
-
-```
-https://makersuite.google.com/app/apikey
-```
-
-2. Set the API key as an environment variable:
-
-```
-export GOOGLE_GEMINI_API_KEY="YOUR_API_KEY"
-```
-
-3. Run the Program:
-
-```
-python3 gemini-bot.py
-```
-
-3. Exit the Program:
-
-```
->exit()
-```
-
-**Troubleshooting**
-
-If you encounter any issues, check the following:
-
-* Ensure that you have an active Google Gen AI Gemini API key.
-* Make sure the API key is set as an environment variable.
-* Check that the Python script is running in the virtual environment.
-* Verify that the requirements are installed correctly.
-
-**Contributions**
-
-Contributions are welcome! Please read the CONTRIBUTING.md file for more information.
-
-**License**
-
-This project is licensed under the MIT License - see the LICENSE file for details.%
+Lisensi
+Projek ini dilisensikan di bawah MIT License.
